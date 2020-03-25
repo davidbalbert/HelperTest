@@ -32,5 +32,28 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSPortName</key>
+			<string>HelperTest Helper</string>
+			<key>NSSendTypes</key>
+			<array>
+				<string>public.text</string>
+			</array>
+			<key>NSMessage</key>
+			<string>sendText</string>
+			<key>NSRequiredContext</key>
+			<dict>
+				<key>NSServiceCategory</key>
+				<string>public.text</string>
+			</dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Send Text To HelperTest</string>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

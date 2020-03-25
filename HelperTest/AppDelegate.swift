@@ -10,9 +10,9 @@ import Cocoa
 import ServiceManagement
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, MainXPCProtocol {
     @IBOutlet var window: NSWindow!
-    @IBOutlet var textField: NSTextField!
+    @IBOutlet var textView: NSTextView!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         guard SMLoginItemSetEnabled("is.dave.HelperTest-Helper" as CFString, true) else {
@@ -22,23 +22,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let connection = NSXPCConnection(machServiceName: "is.dave.HelperTest-Helper", options: [])
         connection.remoteObjectInterface = NSXPCInterface(with: HelperXPCProtocol.self)
+
+        connection.exportedInterface = NSXPCInterface(with: MainXPCProtocol.self)
+        connection.exportedObject = self
+
         connection.resume()
 
         let service = connection.remoteObjectProxyWithErrorHandler { error in
-            print("Received error in Helper: \(error.localizedDescription)", error)
+            print("Received error in Main: \(error.localizedDescription)", error)
         } as? HelperXPCProtocol
 
         service?.sayHello { reply in
             DispatchQueue.main.async {
-                self.textField.stringValue = reply
+                self.textView.string = reply
             }
         }
+    }
+
+    func setString(_ s: String) {
+        textView.string = s
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
 }
 

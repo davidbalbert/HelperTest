@@ -10,8 +10,8 @@
 		630CAD1B242B85A90020CF5B /* HelperTest Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 634B4C74242A61C20048B788 /* HelperTest Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		630CAD1E242B86AB0020CF5B /* HelperXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD1D242B86AB0020CF5B /* HelperXPCProtocol.swift */; };
 		630CAD1F242B86C60020CF5B /* HelperXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD1D242B86AB0020CF5B /* HelperXPCProtocol.swift */; };
-		630CAD21242B87D80020CF5B /* ServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD20242B87D80020CF5B /* ServiceDelegate.swift */; };
-		630CAD23242B88110020CF5B /* HelperXPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD22242B88110020CF5B /* HelperXPC.swift */; };
+		630CAD25242B9CB60020CF5B /* MainXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD24242B9CB60020CF5B /* MainXPCProtocol.swift */; };
+		630CAD26242B9CB60020CF5B /* MainXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD24242B9CB60020CF5B /* MainXPCProtocol.swift */; };
 		634B4C63242A33E40048B788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B4C62242A33E40048B788 /* AppDelegate.swift */; };
 		634B4C65242A33E60048B788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C64242A33E60048B788 /* Assets.xcassets */; };
 		634B4C68242A33E60048B788 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C66242A33E60048B788 /* MainMenu.xib */; };
@@ -35,8 +35,7 @@
 
 /* Begin PBXFileReference section */
 		630CAD1D242B86AB0020CF5B /* HelperXPCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperXPCProtocol.swift; sourceTree = "<group>"; };
-		630CAD20242B87D80020CF5B /* ServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
-		630CAD22242B88110020CF5B /* HelperXPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperXPC.swift; sourceTree = "<group>"; };
+		630CAD24242B9CB60020CF5B /* MainXPCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainXPCProtocol.swift; sourceTree = "<group>"; };
 		634B4C5F242A33E40048B788 /* HelperTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelperTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		634B4C62242A33E40048B788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		634B4C64242A33E60048B788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				630CAD1D242B86AB0020CF5B /* HelperXPCProtocol.swift */,
+				630CAD24242B9CB60020CF5B /* MainXPCProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -112,8 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				634B4C76242A61C20048B788 /* AppDelegate.swift */,
-				630CAD20242B87D80020CF5B /* ServiceDelegate.swift */,
-				630CAD22242B88110020CF5B /* HelperXPC.swift */,
 				634B4C78242A61C60048B788 /* Assets.xcassets */,
 				634B4C7A242A61C60048B788 /* MainMenu.xib */,
 				634B4C7D242A61C60048B788 /* Info.plist */,
@@ -223,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630CAD25242B9CB60020CF5B /* MainXPCProtocol.swift in Sources */,
 				634B4C63242A33E40048B788 /* AppDelegate.swift in Sources */,
 				630CAD1E242B86AB0020CF5B /* HelperXPCProtocol.swift in Sources */,
 			);
@@ -233,8 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				634B4C77242A61C20048B788 /* AppDelegate.swift in Sources */,
-				630CAD23242B88110020CF5B /* HelperXPC.swift in Sources */,
-				630CAD21242B87D80020CF5B /* ServiceDelegate.swift in Sources */,
+				630CAD26242B9CB60020CF5B /* MainXPCProtocol.swift in Sources */,
 				630CAD1F242B86C60020CF5B /* HelperXPCProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
