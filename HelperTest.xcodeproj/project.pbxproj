@@ -10,6 +10,9 @@
 		634B4C63242A33E40048B788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B4C62242A33E40048B788 /* AppDelegate.swift */; };
 		634B4C65242A33E60048B788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C64242A33E60048B788 /* Assets.xcassets */; };
 		634B4C68242A33E60048B788 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C66242A33E60048B788 /* MainMenu.xib */; };
+		634B4C77242A61C20048B788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B4C76242A61C20048B788 /* AppDelegate.swift */; };
+		634B4C79242A61C60048B788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C78242A61C60048B788 /* Assets.xcassets */; };
+		634B4C7C242A61C60048B788 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C7A242A61C60048B788 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,10 +22,23 @@
 		634B4C67242A33E60048B788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		634B4C69242A33E60048B788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		634B4C6A242A33E60048B788 /* HelperTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelperTest.entitlements; sourceTree = "<group>"; };
+		634B4C74242A61C20048B788 /* HelperTest Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelperTest Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		634B4C76242A61C20048B788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		634B4C78242A61C60048B788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		634B4C7B242A61C60048B788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		634B4C7D242A61C60048B788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		634B4C7E242A61C60048B788 /* HelperTest_Helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelperTest_Helper.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		634B4C5C242A33E40048B788 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		634B4C71242A61C20048B788 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				634B4C61242A33E40048B788 /* HelperTest */,
+				634B4C75242A61C20048B788 /* HelperTest Helper */,
 				634B4C60242A33E40048B788 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				634B4C5F242A33E40048B788 /* HelperTest.app */,
+				634B4C74242A61C20048B788 /* HelperTest Helper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +76,18 @@
 				634B4C6A242A33E60048B788 /* HelperTest.entitlements */,
 			);
 			path = HelperTest;
+			sourceTree = "<group>";
+		};
+		634B4C75242A61C20048B788 /* HelperTest Helper */ = {
+			isa = PBXGroup;
+			children = (
+				634B4C76242A61C20048B788 /* AppDelegate.swift */,
+				634B4C78242A61C60048B788 /* Assets.xcassets */,
+				634B4C7A242A61C60048B788 /* MainMenu.xib */,
+				634B4C7D242A61C60048B788 /* Info.plist */,
+				634B4C7E242A61C60048B788 /* HelperTest_Helper.entitlements */,
+			);
+			path = "HelperTest Helper";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +110,23 @@
 			productReference = 634B4C5F242A33E40048B788 /* HelperTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		634B4C73242A61C20048B788 /* HelperTest Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 634B4C7F242A61C60048B788 /* Build configuration list for PBXNativeTarget "HelperTest Helper" */;
+			buildPhases = (
+				634B4C70242A61C20048B788 /* Sources */,
+				634B4C71242A61C20048B788 /* Frameworks */,
+				634B4C72242A61C20048B788 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HelperTest Helper";
+			productName = "HelperTest Helper";
+			productReference = 634B4C74242A61C20048B788 /* HelperTest Helper.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -91,6 +138,9 @@
 				ORGANIZATIONNAME = "David Albert";
 				TargetAttributes = {
 					634B4C5E242A33E40048B788 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					634B4C73242A61C20048B788 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
@@ -109,6 +159,7 @@
 			projectRoot = "";
 			targets = (
 				634B4C5E242A33E40048B788 /* HelperTest */,
+				634B4C73242A61C20048B788 /* HelperTest Helper */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +174,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		634B4C72242A61C20048B788 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634B4C79242A61C60048B788 /* Assets.xcassets in Resources */,
+				634B4C7C242A61C60048B788 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -134,6 +194,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		634B4C70242A61C20048B788 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634B4C77242A61C20048B788 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -141,6 +209,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				634B4C67242A33E60048B788 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		634B4C7A242A61C60048B788 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				634B4C7B242A61C60048B788 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -301,6 +377,46 @@
 			};
 			name = Release;
 		};
+		634B4C80242A61C60048B788 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HelperTest Helper/HelperTest_Helper.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9K689XE65M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "HelperTest Helper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "is.dave.HelperTest-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		634B4C81242A61C60048B788 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HelperTest Helper/HelperTest_Helper.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9K689XE65M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "HelperTest Helper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "is.dave.HelperTest-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -318,6 +434,15 @@
 			buildConfigurations = (
 				634B4C6E242A33E60048B788 /* Debug */,
 				634B4C6F242A33E60048B788 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		634B4C7F242A61C60048B788 /* Build configuration list for PBXNativeTarget "HelperTest Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				634B4C80242A61C60048B788 /* Debug */,
+				634B4C81242A61C60048B788 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
