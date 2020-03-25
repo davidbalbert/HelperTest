@@ -11,11 +11,14 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
+    @IBOutlet var window: NSWindow!
 
+    let listener = NSXPCListener(machServiceName: Bundle.main.bundleIdentifier!)
+    let delegate = ServiceDelegate()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        listener.delegate = delegate
+        listener.resume()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

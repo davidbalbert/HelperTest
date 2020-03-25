@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630CAD1B242B85A90020CF5B /* HelperTest Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 634B4C74242A61C20048B788 /* HelperTest Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		630CAD1E242B86AB0020CF5B /* HelperXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD1D242B86AB0020CF5B /* HelperXPCProtocol.swift */; };
+		630CAD1F242B86C60020CF5B /* HelperXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD1D242B86AB0020CF5B /* HelperXPCProtocol.swift */; };
+		630CAD21242B87D80020CF5B /* ServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD20242B87D80020CF5B /* ServiceDelegate.swift */; };
+		630CAD23242B88110020CF5B /* HelperXPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD22242B88110020CF5B /* HelperXPC.swift */; };
 		634B4C63242A33E40048B788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B4C62242A33E40048B788 /* AppDelegate.swift */; };
 		634B4C65242A33E60048B788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C64242A33E60048B788 /* Assets.xcassets */; };
 		634B4C68242A33E60048B788 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C66242A33E60048B788 /* MainMenu.xib */; };
@@ -15,7 +20,23 @@
 		634B4C7C242A61C60048B788 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C7A242A61C60048B788 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		630CAD1A242B853A0020CF5B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				630CAD1B242B85A90020CF5B /* HelperTest Helper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		630CAD1D242B86AB0020CF5B /* HelperXPCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperXPCProtocol.swift; sourceTree = "<group>"; };
+		630CAD20242B87D80020CF5B /* ServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
+		630CAD22242B88110020CF5B /* HelperXPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperXPC.swift; sourceTree = "<group>"; };
 		634B4C5F242A33E40048B788 /* HelperTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelperTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		634B4C62242A33E40048B788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		634B4C64242A33E60048B788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,9 +69,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630CAD1C242B86910020CF5B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				630CAD1D242B86AB0020CF5B /* HelperXPCProtocol.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		634B4C56242A33E40048B788 = {
 			isa = PBXGroup;
 			children = (
+				630CAD1C242B86910020CF5B /* Common */,
 				634B4C61242A33E40048B788 /* HelperTest */,
 				634B4C75242A61C20048B788 /* HelperTest Helper */,
 				634B4C60242A33E40048B788 /* Products */,
@@ -82,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				634B4C76242A61C20048B788 /* AppDelegate.swift */,
+				630CAD20242B87D80020CF5B /* ServiceDelegate.swift */,
+				630CAD22242B88110020CF5B /* HelperXPC.swift */,
 				634B4C78242A61C60048B788 /* Assets.xcassets */,
 				634B4C7A242A61C60048B788 /* MainMenu.xib */,
 				634B4C7D242A61C60048B788 /* Info.plist */,
@@ -100,6 +132,7 @@
 				634B4C5B242A33E40048B788 /* Sources */,
 				634B4C5C242A33E40048B788 /* Frameworks */,
 				634B4C5D242A33E40048B788 /* Resources */,
+				630CAD1A242B853A0020CF5B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -191,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				634B4C63242A33E40048B788 /* AppDelegate.swift in Sources */,
+				630CAD1E242B86AB0020CF5B /* HelperXPCProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +233,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				634B4C77242A61C20048B788 /* AppDelegate.swift in Sources */,
+				630CAD23242B88110020CF5B /* HelperXPC.swift in Sources */,
+				630CAD21242B87D80020CF5B /* ServiceDelegate.swift in Sources */,
+				630CAD1F242B86C60020CF5B /* HelperXPCProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9K689XE65M;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = HelperTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -367,7 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9K689XE65M;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = HelperTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -388,7 +425,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9K689XE65M;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = "HelperTest Helper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -409,7 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9K689XE65M;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = "HelperTest Helper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
