@@ -54,13 +54,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
 
-        let service0 = directConnection.remoteObjectProxyWithErrorHandler { error in
+        let service = directConnection.remoteObjectProxyWithErrorHandler { error in
             NSLog("xxxx Received error in ServiceProvider (direct connection): \(error.localizedDescription) \(error)")
-        }
-
-        NSLog("xxxx service provider: service0 \(service0)")
-
-        let service = service0 as? AppProtocol
+        } as? AppProtocol
 
         NSLog("xxxx service provider: send text to app \(service)")
         service?.speakText(s)
