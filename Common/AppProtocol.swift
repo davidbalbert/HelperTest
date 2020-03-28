@@ -8,6 +8,6 @@
 
 import Foundation
 
-@objc protocol MainXPCProtocol {
-    func setString(_ s: String)
+@objc protocol AppProtocol {
+    func speakText(_ s: String)
 }

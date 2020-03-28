@@ -7,35 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		630CAD1B242B85A90020CF5B /* HelperTest Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 634B4C74242A61C20048B788 /* HelperTest Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		630CAD1E242B86AB0020CF5B /* HelperXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD1D242B86AB0020CF5B /* HelperXPCProtocol.swift */; };
-		630CAD1F242B86C60020CF5B /* HelperXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD1D242B86AB0020CF5B /* HelperXPCProtocol.swift */; };
-		630CAD25242B9CB60020CF5B /* MainXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD24242B9CB60020CF5B /* MainXPCProtocol.swift */; };
-		630CAD26242B9CB60020CF5B /* MainXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD24242B9CB60020CF5B /* MainXPCProtocol.swift */; };
+		630CAD1B242B85A90020CF5B /* HelperTest Helper.app in Copy Login Items */ = {isa = PBXBuildFile; fileRef = 634B4C74242A61C20048B788 /* HelperTest Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		630CAD1E242B86AB0020CF5B /* RendezvousPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD1D242B86AB0020CF5B /* RendezvousPoint.swift */; };
+		630CAD1F242B86C60020CF5B /* RendezvousPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD1D242B86AB0020CF5B /* RendezvousPoint.swift */; };
+		630CAD25242B9CB60020CF5B /* AppProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD24242B9CB60020CF5B /* AppProtocol.swift */; };
 		634B4C63242A33E40048B788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B4C62242A33E40048B788 /* AppDelegate.swift */; };
 		634B4C65242A33E60048B788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C64242A33E60048B788 /* Assets.xcassets */; };
 		634B4C68242A33E60048B788 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C66242A33E60048B788 /* MainMenu.xib */; };
 		634B4C77242A61C20048B788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B4C76242A61C20048B788 /* AppDelegate.swift */; };
 		634B4C79242A61C60048B788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C78242A61C60048B788 /* Assets.xcassets */; };
 		634B4C7C242A61C60048B788 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634B4C7A242A61C60048B788 /* MainMenu.xib */; };
+		636CBB3C242C46020062CF9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636CBB3B242C46020062CF9A /* AppDelegate.swift */; };
+		636CBB3E242C46060062CF9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636CBB3D242C46060062CF9A /* Assets.xcassets */; };
+		636CBB41242C46060062CF9A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636CBB3F242C46060062CF9A /* MainMenu.xib */; };
+		636CBB48242C46B60062CF9A /* HelperTest Service Provider.app in Copy Service Provide */ = {isa = PBXBuildFile; fileRef = 636CBB39242C46020062CF9A /* HelperTest Service Provider.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		636CBB49242C494C0062CF9A /* RendezvousPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD1D242B86AB0020CF5B /* RendezvousPoint.swift */; };
+		636CBB4D242CDB940062CF9A /* AppProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD24242B9CB60020CF5B /* AppProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		630CAD1A242B853A0020CF5B /* CopyFiles */ = {
+		630CAD1A242B853A0020CF5B /* Copy Login Items */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				630CAD1B242B85A90020CF5B /* HelperTest Helper.app in CopyFiles */,
+				630CAD1B242B85A90020CF5B /* HelperTest Helper.app in Copy Login Items */,
 			);
+			name = "Copy Login Items";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		636CBB47242C46760062CF9A /* Copy Service Provide */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				636CBB48242C46B60062CF9A /* HelperTest Service Provider.app in Copy Service Provide */,
+			);
+			name = "Copy Service Provide";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		630CAD1D242B86AB0020CF5B /* HelperXPCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperXPCProtocol.swift; sourceTree = "<group>"; };
-		630CAD24242B9CB60020CF5B /* MainXPCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainXPCProtocol.swift; sourceTree = "<group>"; };
+		630CAD1D242B86AB0020CF5B /* RendezvousPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezvousPoint.swift; sourceTree = "<group>"; };
+		630CAD24242B9CB60020CF5B /* AppProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProtocol.swift; sourceTree = "<group>"; };
 		634B4C5F242A33E40048B788 /* HelperTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelperTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		634B4C62242A33E40048B788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		634B4C64242A33E60048B788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +65,12 @@
 		634B4C7B242A61C60048B788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		634B4C7D242A61C60048B788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		634B4C7E242A61C60048B788 /* HelperTest_Helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelperTest_Helper.entitlements; sourceTree = "<group>"; };
+		636CBB39242C46020062CF9A /* HelperTest Service Provider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelperTest Service Provider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		636CBB3B242C46020062CF9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		636CBB3D242C46060062CF9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		636CBB40242C46060062CF9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		636CBB42242C46060062CF9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		636CBB43242C46060062CF9A /* HelperTest_Service_Provider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelperTest_Service_Provider.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,14 +88,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		636CBB36242C46020062CF9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		630CAD1C242B86910020CF5B /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				630CAD1D242B86AB0020CF5B /* HelperXPCProtocol.swift */,
-				630CAD24242B9CB60020CF5B /* MainXPCProtocol.swift */,
+				630CAD1D242B86AB0020CF5B /* RendezvousPoint.swift */,
+				630CAD24242B9CB60020CF5B /* AppProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -83,6 +113,7 @@
 				630CAD1C242B86910020CF5B /* Common */,
 				634B4C61242A33E40048B788 /* HelperTest */,
 				634B4C75242A61C20048B788 /* HelperTest Helper */,
+				636CBB3A242C46020062CF9A /* HelperTest Service Provider */,
 				634B4C60242A33E40048B788 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +123,7 @@
 			children = (
 				634B4C5F242A33E40048B788 /* HelperTest.app */,
 				634B4C74242A61C20048B788 /* HelperTest Helper.app */,
+				636CBB39242C46020062CF9A /* HelperTest Service Provider.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +152,18 @@
 			path = "HelperTest Helper";
 			sourceTree = "<group>";
 		};
+		636CBB3A242C46020062CF9A /* HelperTest Service Provider */ = {
+			isa = PBXGroup;
+			children = (
+				636CBB3B242C46020062CF9A /* AppDelegate.swift */,
+				636CBB3D242C46060062CF9A /* Assets.xcassets */,
+				636CBB3F242C46060062CF9A /* MainMenu.xib */,
+				636CBB42242C46060062CF9A /* Info.plist */,
+				636CBB43242C46060062CF9A /* HelperTest_Service_Provider.entitlements */,
+			);
+			path = "HelperTest Service Provider";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,7 +174,8 @@
 				634B4C5B242A33E40048B788 /* Sources */,
 				634B4C5C242A33E40048B788 /* Frameworks */,
 				634B4C5D242A33E40048B788 /* Resources */,
-				630CAD1A242B853A0020CF5B /* CopyFiles */,
+				630CAD1A242B853A0020CF5B /* Copy Login Items */,
+				636CBB47242C46760062CF9A /* Copy Service Provide */,
 			);
 			buildRules = (
 			);
@@ -158,13 +203,30 @@
 			productReference = 634B4C74242A61C20048B788 /* HelperTest Helper.app */;
 			productType = "com.apple.product-type.application";
 		};
+		636CBB38242C46020062CF9A /* HelperTest Service Provider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 636CBB46242C46060062CF9A /* Build configuration list for PBXNativeTarget "HelperTest Service Provider" */;
+			buildPhases = (
+				636CBB35242C46020062CF9A /* Sources */,
+				636CBB36242C46020062CF9A /* Frameworks */,
+				636CBB37242C46020062CF9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HelperTest Service Provider";
+			productName = "HelperTest Service Provider";
+			productReference = 636CBB39242C46020062CF9A /* HelperTest Service Provider.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		634B4C57242A33E40048B788 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "David Albert";
 				TargetAttributes = {
@@ -173,6 +235,9 @@
 					};
 					634B4C73242A61C20048B788 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					636CBB38242C46020062CF9A = {
+						CreatedOnToolsVersion = 11.4;
 					};
 				};
 			};
@@ -191,6 +256,7 @@
 			targets = (
 				634B4C5E242A33E40048B788 /* HelperTest */,
 				634B4C73242A61C20048B788 /* HelperTest Helper */,
+				636CBB38242C46020062CF9A /* HelperTest Service Provider */,
 			);
 		};
 /* End PBXProject section */
@@ -214,6 +280,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		636CBB37242C46020062CF9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				636CBB3E242C46060062CF9A /* Assets.xcassets in Resources */,
+				636CBB41242C46060062CF9A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -221,9 +296,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				630CAD25242B9CB60020CF5B /* MainXPCProtocol.swift in Sources */,
+				630CAD25242B9CB60020CF5B /* AppProtocol.swift in Sources */,
 				634B4C63242A33E40048B788 /* AppDelegate.swift in Sources */,
-				630CAD1E242B86AB0020CF5B /* HelperXPCProtocol.swift in Sources */,
+				630CAD1E242B86AB0020CF5B /* RendezvousPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,8 +307,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				634B4C77242A61C20048B788 /* AppDelegate.swift in Sources */,
-				630CAD26242B9CB60020CF5B /* MainXPCProtocol.swift in Sources */,
-				630CAD1F242B86C60020CF5B /* HelperXPCProtocol.swift in Sources */,
+				630CAD1F242B86C60020CF5B /* RendezvousPoint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		636CBB35242C46020062CF9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				636CBB3C242C46020062CF9A /* AppDelegate.swift in Sources */,
+				636CBB49242C494C0062CF9A /* RendezvousPoint.swift in Sources */,
+				636CBB4D242CDB940062CF9A /* AppProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +336,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				634B4C7B242A61C60048B788 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		636CBB3F242C46060062CF9A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				636CBB40242C46060062CF9A /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -377,7 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HelperTest/HelperTest.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9K689XE65M;
@@ -398,7 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HelperTest/HelperTest.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9K689XE65M;
@@ -419,7 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "HelperTest Helper/HelperTest_Helper.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9K689XE65M;
@@ -440,7 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "HelperTest Helper/HelperTest_Helper.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9K689XE65M;
@@ -451,6 +543,48 @@
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "is.dave.HelperTest-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		636CBB44242C46060062CF9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HelperTest Service Provider/HelperTest_Service_Provider.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9K689XE65M;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = "HelperTest Service Provider/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "is.dave.HelperTest-Service-Provider";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		636CBB45242C46060062CF9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HelperTest Service Provider/HelperTest_Service_Provider.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9K689XE65M;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = "HelperTest Service Provider/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "is.dave.HelperTest-Service-Provider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -482,6 +616,15 @@
 			buildConfigurations = (
 				634B4C80242A61C60048B788 /* Debug */,
 				634B4C81242A61C60048B788 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		636CBB46242C46060062CF9A /* Build configuration list for PBXNativeTarget "HelperTest Service Provider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				636CBB44242C46060062CF9A /* Debug */,
+				636CBB45242C46060062CF9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

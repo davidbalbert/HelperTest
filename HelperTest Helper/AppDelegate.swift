@@ -9,50 +9,44 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, NSXPCListenerDelegate, HelperXPCProtocol {
-
+class AppDelegate: NSObject, NSApplicationDelegate, NSXPCListenerDelegate, RendezvousPoint {
     @IBOutlet var window: NSWindow!
 
     let listener = NSXPCListener(machServiceName: Bundle.main.bundleIdentifier!)
-    var connection: NSXPCConnection?
+    var endpoint: NSXPCListenerEndpoint?
+    var serviceProviderCallback: ((NSXPCListenerEndpoint) -> Void)?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        NSApp.servicesProvider = self
-
         listener.delegate = self
         listener.resume()
     }
 
     func listener(_ listener: NSXPCListener, shouldAcceptNewConnection newConnection: NSXPCConnection) -> Bool {
-        newConnection.exportedInterface = NSXPCInterface(with: HelperXPCProtocol.self)
+        newConnection.exportedInterface = NSXPCInterface(with: RendezvousPoint.self)
         newConnection.exportedObject = self
         newConnection.resume()
-
-        connection = newConnection
 
         return true
     }
 
-    func sayHello(withReply reply: @escaping (String) -> Void) {
-        reply("Hello, XPC world!")
+    func registerApp(endpoint: NSXPCListenerEndpoint) {
+        NSLog("xxxx helper: register app")
+
+        self.endpoint = endpoint
+
+        if let reply = serviceProviderCallback {
+            reply(endpoint)
+        }
     }
 
-    @objc func sendText(_ pboard: NSPasteboard, userData: String?, error: AutoreleasingUnsafeMutablePointer<NSString?>) {
+    func registerServiceProvider(withReply reply: @escaping (NSXPCListenerEndpoint) -> Void) {
+        NSLog("xxxx helper: register service provider")
 
-        NSLog("service called")
-
-        guard let items = pboard.pasteboardItems else { return }
-        guard let type = items[0].availableType(from: [NSPasteboard.PasteboardType(rawValue: "public.plain-text")]) else { return }
-
-        guard let s = items[0].string(forType: type) else { return }
-
-        NSLog("%@\n", s as NSString)
-
-        let service = connection!.remoteObjectProxyWithErrorHandler { error in
-            NSLog("Received error in Helper: \(error.localizedDescription) \(error)")
-        } as? MainXPCProtocol
-
-        service!.setString(s)
+        if let endpoint = endpoint {
+            reply(endpoint)
+        } else {
+            serviceProviderCallback = reply
+        }
     }
 }
 
