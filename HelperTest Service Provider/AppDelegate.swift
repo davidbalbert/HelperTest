@@ -15,16 +15,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var directConnection: NSXPCConnection?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "is.dave.HelperTest")!
+        let config = NSWorkspace.OpenConfiguration()
+
+        NSWorkspace.shared.openApplication(at: url, configuration: config) { runningApplication, error in
+            DispatchQueue.main.async {
+                self.setupXPC()
+            }
+        }
+    }
+
+    func setupXPC() {
         let helperConnection = NSXPCConnection(machServiceName: "is.dave.HelperTest-Helper", options: [])
         helperConnection.remoteObjectInterface = NSXPCInterface(with: RendezvousPoint.self)
         helperConnection.resume()
 
         let service = helperConnection.remoteObjectProxyWithErrorHandler { error in
             NSLog("xxxx Received error in ServiceProvider: \(error.localizedDescription) \(error)")
-        } as? RendezvousPoint
+        } as! RendezvousPoint
 
         NSLog("xxxx service provider: send register service provider")
-        service?.registerServiceProvider { endpoint in
+        service.registerServiceProvider { endpoint in
             DispatchQueue.main.async {
                 NSLog("xxxx service provider: registered")
                 let directConnection = NSXPCConnection(listenerEndpoint: endpoint)
@@ -56,10 +67,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let service = directConnection.remoteObjectProxyWithErrorHandler { error in
             NSLog("xxxx Received error in ServiceProvider (direct connection): \(error.localizedDescription) \(error)")
-        } as? AppProtocol
+        } as! AppProtocol
 
         NSLog("xxxx service provider: send text to app \(service)")
-        service?.speakText(s)
+        service.speakText(s)
     }
 }
 
