@@ -15,11 +15,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var directConnection: NSXPCConnection?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        NSLog("xxxx service provider: launch")
         let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "is.dave.HelperTest")!
         let config = NSWorkspace.OpenConfiguration()
 
         NSWorkspace.shared.openApplication(at: url, configuration: config) { runningApplication, error in
-            DispatchQueue.main.async {
+            // Wait a bit before setting up XPC to make sure the Helper is running
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.setupXPC()
             }
         }
@@ -42,6 +44,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 directConnection.remoteObjectInterface = NSXPCInterface(with: AppProtocol.self)
                 directConnection.resume()
 
+                // If the main app quits, quit the service provider.
+                directConnection.interruptionHandler = {
+                    NSApp.terminate(self)
+                }
+
                 self.directConnection = directConnection
 
                 NSApp.servicesProvider = self
@@ -50,7 +57,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func sendText(_ pboard: NSPasteboard, userData: String?, error: AutoreleasingUnsafeMutablePointer<NSString?>) {
-
         NSLog("xxxx service provider: service called")
 
         guard let items = pboard.pasteboardItems else { return }

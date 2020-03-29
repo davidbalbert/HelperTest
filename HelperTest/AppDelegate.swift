@@ -16,26 +16,41 @@ class AppDelegate: NSObject, NSApplicationDelegate, AppProtocol, NSXPCListenerDe
 
     var listener: NSXPCListener!
 
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
+    func applicationDidFinishLaunching(_ notification: Notification) {
         guard SMLoginItemSetEnabled("is.dave.HelperTest-Helper" as CFString, true) else {
             NSLog("xxxx app: couldn't enable login item")
             return
         }
 
+        setupXPC()
+    }
+
+    func applicationWillTerminate(_ notification: Notification) {
+        SMLoginItemSetEnabled("is.dave.HelperTest-Helper" as CFString, false)
+    }
+
+    func setupXPC() {
         let connection = NSXPCConnection(machServiceName: "is.dave.HelperTest-Helper", options: [])
         connection.remoteObjectInterface = NSXPCInterface(with: RendezvousPoint.self)
+
+
         connection.resume()
 
         let service = connection.remoteObjectProxyWithErrorHandler { error in
             NSLog("xxxx Received error in App: \(error.localizedDescription) \(error)")
-        } as? RendezvousPoint
+        } as! RendezvousPoint
 
         listener = NSXPCListener.anonymous()
         listener.delegate = self
         listener.resume()
 
         NSLog("xxxx app: send register app")
-        service?.registerApp(endpoint: listener.endpoint)
+        service.registerApp(endpoint: listener.endpoint)
+
+        connection.interruptionHandler = {
+            NSLog("xxxx app: interrupt")
+            service.registerApp(endpoint: self.listener.endpoint)
+        }
     }
 
     func listener(_ listener: NSXPCListener, shouldAcceptNewConnection newConnection: NSXPCConnection) -> Bool {
@@ -52,10 +67,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, AppProtocol, NSXPCListenerDe
         DispatchQueue.main.async {
             self.textView.string = s
         }
-    }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
     }
 }
 

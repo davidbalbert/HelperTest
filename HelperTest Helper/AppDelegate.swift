@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXPCListenerDelegate, Rende
     var endpoint: NSXPCListenerEndpoint?
     var serviceProviderCallback: ((NSXPCListenerEndpoint) -> Void)?
 
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
+    func applicationDidFinishLaunching(_ notification: Notification) {
         listener.delegate = self
         listener.resume()
     }
