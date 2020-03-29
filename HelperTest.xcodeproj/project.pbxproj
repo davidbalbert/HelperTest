@@ -20,10 +20,27 @@
 		636CBB3C242C46020062CF9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636CBB3B242C46020062CF9A /* AppDelegate.swift */; };
 		636CBB3E242C46060062CF9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636CBB3D242C46060062CF9A /* Assets.xcassets */; };
 		636CBB41242C46060062CF9A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636CBB3F242C46060062CF9A /* MainMenu.xib */; };
-		636CBB48242C46B60062CF9A /* HelperTest Service Provider.app in Copy Service Provide */ = {isa = PBXBuildFile; fileRef = 636CBB39242C46020062CF9A /* HelperTest Service Provider.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		636CBB48242C46B60062CF9A /* HelperTest Service Provider.app in Copy Service Provider */ = {isa = PBXBuildFile; fileRef = 636CBB39242C46020062CF9A /* HelperTest Service Provider.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		636CBB49242C494C0062CF9A /* RendezvousPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD1D242B86AB0020CF5B /* RendezvousPoint.swift */; };
 		636CBB4D242CDB940062CF9A /* AppProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD24242B9CB60020CF5B /* AppProtocol.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63BD80E52430270E003B0BCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 634B4C57242A33E40048B788 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 634B4C73242A61C20048B788;
+			remoteInfo = "HelperTest Helper";
+		};
+		63BD80E72430270E003B0BCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 634B4C57242A33E40048B788 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 636CBB38242C46020062CF9A;
+			remoteInfo = "HelperTest Service Provider";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		630CAD1A242B853A0020CF5B /* Copy Login Items */ = {
@@ -37,15 +54,15 @@
 			name = "Copy Login Items";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		636CBB47242C46760062CF9A /* Copy Service Provide */ = {
+		636CBB47242C46760062CF9A /* Copy Service Provider */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 6;
+			dstPath = Contents/Helpers;
+			dstSubfolderSpec = 1;
 			files = (
-				636CBB48242C46B60062CF9A /* HelperTest Service Provider.app in Copy Service Provide */,
+				636CBB48242C46B60062CF9A /* HelperTest Service Provider.app in Copy Service Provider */,
 			);
-			name = "Copy Service Provide";
+			name = "Copy Service Provider";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -53,6 +70,7 @@
 /* Begin PBXFileReference section */
 		630CAD1D242B86AB0020CF5B /* RendezvousPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezvousPoint.swift; sourceTree = "<group>"; };
 		630CAD24242B9CB60020CF5B /* AppProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProtocol.swift; sourceTree = "<group>"; };
+		6331A207243110B90042511F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		634B4C5F242A33E40048B788 /* HelperTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelperTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		634B4C62242A33E40048B788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		634B4C64242A33E60048B788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +89,7 @@
 		636CBB40242C46060062CF9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		636CBB42242C46060062CF9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		636CBB43242C46060062CF9A /* HelperTest_Service_Provider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelperTest_Service_Provider.entitlements; sourceTree = "<group>"; };
+		63BD80E92430F8D8003B0BCF /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +129,8 @@
 		634B4C56242A33E40048B788 = {
 			isa = PBXGroup;
 			children = (
+				6331A207243110B90042511F /* .gitignore */,
+				63BD80E92430F8D8003B0BCF /* Config.xcconfig */,
 				630CAD1C242B86910020CF5B /* Common */,
 				634B4C61242A33E40048B788 /* HelperTest */,
 				634B4C75242A61C20048B788 /* HelperTest Helper */,
@@ -175,11 +196,13 @@
 				634B4C5C242A33E40048B788 /* Frameworks */,
 				634B4C5D242A33E40048B788 /* Resources */,
 				630CAD1A242B853A0020CF5B /* Copy Login Items */,
-				636CBB47242C46760062CF9A /* Copy Service Provide */,
+				636CBB47242C46760062CF9A /* Copy Service Provider */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				63BD80E62430270E003B0BCF /* PBXTargetDependency */,
+				63BD80E82430270E003B0BCF /* PBXTargetDependency */,
 			);
 			name = HelperTest;
 			productName = HelperTest;
@@ -323,6 +346,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		63BD80E62430270E003B0BCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 634B4C73242A61C20048B788 /* HelperTest Helper */;
+			targetProxy = 63BD80E52430270E003B0BCF /* PBXContainerItemProxy */;
+		};
+		63BD80E82430270E003B0BCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 636CBB38242C46020062CF9A /* HelperTest Service Provider */;
+			targetProxy = 63BD80E72430270E003B0BCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		634B4C66242A33E60048B788 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
@@ -353,6 +389,7 @@
 /* Begin XCBuildConfiguration section */
 		634B4C6B242A33E60048B788 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63BD80E92430F8D8003B0BCF /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -413,6 +450,7 @@
 		};
 		634B4C6C242A33E60048B788 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63BD80E92430F8D8003B0BCF /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
