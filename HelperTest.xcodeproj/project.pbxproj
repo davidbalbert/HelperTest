@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		630CAD1B242B85A90020CF5B /* HelperTest Helper.app in Copy Login Items */ = {isa = PBXBuildFile; fileRef = 634B4C74242A61C20048B788 /* HelperTest Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		630CAD1B242B85A90020CF5B /* 9K689XE65M.is.dave.HelperTest-Helper.app in Copy Login Items */ = {isa = PBXBuildFile; fileRef = 634B4C74242A61C20048B788 /* 9K689XE65M.is.dave.HelperTest-Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		630CAD1E242B86AB0020CF5B /* RendezvousPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD1D242B86AB0020CF5B /* RendezvousPoint.swift */; };
 		630CAD1F242B86C60020CF5B /* RendezvousPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD1D242B86AB0020CF5B /* RendezvousPoint.swift */; };
 		630CAD25242B9CB60020CF5B /* AppProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD24242B9CB60020CF5B /* AppProtocol.swift */; };
@@ -49,7 +49,7 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				630CAD1B242B85A90020CF5B /* HelperTest Helper.app in Copy Login Items */,
+				630CAD1B242B85A90020CF5B /* 9K689XE65M.is.dave.HelperTest-Helper.app in Copy Login Items */,
 			);
 			name = "Copy Login Items";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +77,7 @@
 		634B4C67242A33E60048B788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		634B4C69242A33E60048B788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		634B4C6A242A33E60048B788 /* HelperTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelperTest.entitlements; sourceTree = "<group>"; };
-		634B4C74242A61C20048B788 /* HelperTest Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelperTest Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		634B4C74242A61C20048B788 /* 9K689XE65M.is.dave.HelperTest-Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "9K689XE65M.is.dave.HelperTest-Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		634B4C76242A61C20048B788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		634B4C78242A61C60048B788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		634B4C7B242A61C60048B788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -89,7 +89,6 @@
 		636CBB40242C46060062CF9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		636CBB42242C46060062CF9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		636CBB43242C46060062CF9A /* HelperTest_Service_Provider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelperTest_Service_Provider.entitlements; sourceTree = "<group>"; };
-		63BD80E92430F8D8003B0BCF /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				6331A207243110B90042511F /* .gitignore */,
-				63BD80E92430F8D8003B0BCF /* Config.xcconfig */,
 				630CAD1C242B86910020CF5B /* Common */,
 				634B4C61242A33E40048B788 /* HelperTest */,
 				634B4C75242A61C20048B788 /* HelperTest Helper */,
@@ -143,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				634B4C5F242A33E40048B788 /* HelperTest.app */,
-				634B4C74242A61C20048B788 /* HelperTest Helper.app */,
+				634B4C74242A61C20048B788 /* 9K689XE65M.is.dave.HelperTest-Helper.app */,
 				636CBB39242C46020062CF9A /* HelperTest Service Provider.app */,
 			);
 			name = Products;
@@ -209,9 +207,9 @@
 			productReference = 634B4C5F242A33E40048B788 /* HelperTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		634B4C73242A61C20048B788 /* HelperTest Helper */ = {
+		634B4C73242A61C20048B788 /* 9K689XE65M.is.dave.HelperTest-Helper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 634B4C7F242A61C60048B788 /* Build configuration list for PBXNativeTarget "HelperTest Helper" */;
+			buildConfigurationList = 634B4C7F242A61C60048B788 /* Build configuration list for PBXNativeTarget "9K689XE65M.is.dave.HelperTest-Helper" */;
 			buildPhases = (
 				634B4C70242A61C20048B788 /* Sources */,
 				634B4C71242A61C20048B788 /* Frameworks */,
@@ -221,9 +219,9 @@
 			);
 			dependencies = (
 			);
-			name = "HelperTest Helper";
+			name = "9K689XE65M.is.dave.HelperTest-Helper";
 			productName = "HelperTest Helper";
-			productReference = 634B4C74242A61C20048B788 /* HelperTest Helper.app */;
+			productReference = 634B4C74242A61C20048B788 /* 9K689XE65M.is.dave.HelperTest-Helper.app */;
 			productType = "com.apple.product-type.application";
 		};
 		636CBB38242C46020062CF9A /* HelperTest Service Provider */ = {
@@ -278,7 +276,7 @@
 			projectRoot = "";
 			targets = (
 				634B4C5E242A33E40048B788 /* HelperTest */,
-				634B4C73242A61C20048B788 /* HelperTest Helper */,
+				634B4C73242A61C20048B788 /* 9K689XE65M.is.dave.HelperTest-Helper */,
 				636CBB38242C46020062CF9A /* HelperTest Service Provider */,
 			);
 		};
@@ -349,7 +347,7 @@
 /* Begin PBXTargetDependency section */
 		63BD80E62430270E003B0BCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 634B4C73242A61C20048B788 /* HelperTest Helper */;
+			target = 634B4C73242A61C20048B788 /* 9K689XE65M.is.dave.HelperTest-Helper */;
 			targetProxy = 63BD80E52430270E003B0BCF /* PBXContainerItemProxy */;
 		};
 		63BD80E82430270E003B0BCF /* PBXTargetDependency */ = {
@@ -557,7 +555,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "is.dave.HelperTest-Helper";
+				PRODUCT_BUNDLE_IDENTIFIER = "9K689XE65M.is.dave.HelperTest-Helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -578,7 +576,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "is.dave.HelperTest-Helper";
+				PRODUCT_BUNDLE_IDENTIFIER = "9K689XE65M.is.dave.HelperTest-Helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -647,7 +645,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		634B4C7F242A61C60048B788 /* Build configuration list for PBXNativeTarget "HelperTest Helper" */ = {
+		634B4C7F242A61C60048B788 /* Build configuration list for PBXNativeTarget "9K689XE65M.is.dave.HelperTest-Helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				634B4C80242A61C60048B788 /* Debug */,

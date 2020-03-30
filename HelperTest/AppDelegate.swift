@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, AppProtocol, NSXPCListenerDe
     var listener: NSXPCListener!
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        guard SMLoginItemSetEnabled("is.dave.HelperTest-Helper" as CFString, true) else {
+        guard SMLoginItemSetEnabled("9K689XE65M.is.dave.HelperTest-Helper" as CFString, true) else {
             NSLog("xxxx app: couldn't enable login item")
             return
         }
@@ -26,11 +26,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, AppProtocol, NSXPCListenerDe
     }
 
     func applicationWillTerminate(_ notification: Notification) {
-        SMLoginItemSetEnabled("is.dave.HelperTest-Helper" as CFString, false)
+        SMLoginItemSetEnabled("9K689XE65M.is.dave.HelperTest-Helper" as CFString, false)
     }
 
     func setupXPC() {
-        let connection = NSXPCConnection(machServiceName: "is.dave.HelperTest-Helper", options: [])
+        let connection = NSXPCConnection(machServiceName: "9K689XE65M.is.dave.HelperTest-Helper", options: [])
         connection.remoteObjectInterface = NSXPCInterface(with: RendezvousPoint.self)
 
 

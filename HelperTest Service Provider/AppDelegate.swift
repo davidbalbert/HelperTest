@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func setupXPC() {
-        let helperConnection = NSXPCConnection(machServiceName: "is.dave.HelperTest-Helper", options: [])
+        let helperConnection = NSXPCConnection(machServiceName: "9K689XE65M.is.dave.HelperTest-Helper", options: [])
         helperConnection.remoteObjectInterface = NSXPCInterface(with: RendezvousPoint.self)
         helperConnection.resume()
 
