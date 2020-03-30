@@ -26,6 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, AppProtocol, NSXPCListenerDe
     }
 
     func applicationWillTerminate(_ notification: Notification) {
+        NSLog("xxxx app: terminate")
         SMLoginItemSetEnabled("9K689XE65M.is.dave.HelperTest-Helper" as CFString, false)
     }
 

@@ -10,8 +10,6 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    @IBOutlet var window: NSWindow!
-
     var directConnection: NSXPCConnection?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -25,6 +23,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 self.setupXPC()
             }
         }
+    }
+
+    func applicationWillTerminate(_ notification: Notification) {
+        NSLog("xxxx service provider: terminate")
     }
 
     func setupXPC() {

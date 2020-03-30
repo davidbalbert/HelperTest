@@ -10,8 +10,6 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSXPCListenerDelegate, RendezvousPoint {
-    @IBOutlet var window: NSWindow!
-
     let listener = NSXPCListener(machServiceName: Bundle.main.bundleIdentifier!)
     var endpoint: NSXPCListenerEndpoint?
     var serviceProviderCallback: ((NSXPCListenerEndpoint) -> Void)?
@@ -19,6 +17,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSXPCListenerDelegate, Rende
     func applicationDidFinishLaunching(_ notification: Notification) {
         listener.delegate = self
         listener.resume()
+    }
+
+    func applicationWillTerminate(_ notification: Notification) {
+        NSLog("xxxx helper: terminate")
     }
 
     func listener(_ listener: NSXPCListener, shouldAcceptNewConnection newConnection: NSXPCConnection) -> Bool {
